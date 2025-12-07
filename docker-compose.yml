@@ -25,7 +25,18 @@ services:
     container_name: 2026-php84-fpm
     build: builds/php84-fpm
     volumes:
-      - ../:/var/www/
-    working_dir: /var/www
+      - ../:/var/www/html/
+    working_dir: /var/www/html
     links:
       - 2026-mysql-8
+
+  2026-homepage:
+    container_name: 2026-homepage
+    build: builds/2026-homepage
+    environment:
+      - VIRTUAL_HOST=homepage.test
+    volumes:
+      - ../2026-homepage:/var/www/html/2026-homepage
+    working_dir: /var/www/2026-homepage
+    depends_on:
+      - 2026-php84-fpm
