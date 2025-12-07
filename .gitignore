@@ -1,0 +1,9 @@
+/.idea
+/certs
+/db-data
+/db-data2
+/dumps
+/junk
+id_rsa
+id_rsa.pub
+known_hosts
