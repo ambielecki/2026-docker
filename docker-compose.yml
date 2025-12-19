@@ -34,7 +34,7 @@ services:
     container_name: 2026-homepage
     build: builds/2026-homepage
     environment:
-      - VIRTUAL_HOST=homepage.test
+      - VIRTUAL_HOST=api.homepage.test
     volumes:
       - ../2026-homepage:/var/www/html/2026-homepage
     working_dir: /var/www/2026-homepage
